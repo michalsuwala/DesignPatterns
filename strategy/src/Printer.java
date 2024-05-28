@@ -4,13 +4,8 @@ public class Printer {
         return printStrategy.print(document);
     }
 
-    public void setPrintStrategy(int strategyId) {
-        if (strategyId == 0) {
-            printStrategy = new PrintColor();
-        }
-        else if (strategyId == 1) {
-            printStrategy = new PrintWithoutColor();
-        }
+    public void setPrintStrategy(PrintStrategy printStrategy) {
+        this.printStrategy = printStrategy;
     }
 
     public Printer() {
